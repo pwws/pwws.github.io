@@ -3,17 +3,17 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+    <!-- <h2 class="footer-heading">{{ site.title | escape }}</h2> -->
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li class="p-name">
-            {%- if site.author -%}
+            <!-- {%- if site.author -%}
               {{ site.author | escape }}
             {%- else -%}
               {{ site.title | escape }}
-            {%- endif -%}
+            {%- endif -%} -->
             </li>
             {%- if site.email -%}
             <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
@@ -21,12 +21,15 @@
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
+      <!-- <div class="footer-col footer-col-2">
         {%- include social.html -%}
-      </div>
+      </div> -->
 
-      <div class="footer-col footer-col-3">
+      <!-- <div class="footer-col footer-col-2">
         <p>{{- site.description | escape -}}</p>
+      </div> -->
+      <div class="footer-col footer-col-3">
+        <p>{%- include cookies_footer.html -%}</p>
       </div>
     </div>
 
