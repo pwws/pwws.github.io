@@ -1,13 +1,20 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    {% if jekyll.environment == 'production' and site.google_analytics %}
+  
+</head>
+
+<body>
+    {{ content }}
+
+    {% include cookies.html %}
+    {% if jekyll.environment == 'production' %}
     {% include analytics.html %}
     {% endif %}
-  </head>
-  <body>
-    {{ content }}
-  </body>
+  
+</body>
+
 </html>
