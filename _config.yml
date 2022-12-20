@@ -27,11 +27,10 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  pwws
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
-
-google_analytics: G-N9W35B89H2
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
