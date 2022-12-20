@@ -1,4 +1,9 @@
-# Setup Ubuntu VM for Raspberry Pi kernel builds and development on a Mac with Apple Silicon
+---
+layout: post
+title:  "Setup Ubuntu VM for Raspberry Pi kernel builds and development on a Mac with Apple Silicon"
+date:   2022-08-28 19:07:27 +0200
+categories: jekyll update
+---
 
 ## Intro
 
