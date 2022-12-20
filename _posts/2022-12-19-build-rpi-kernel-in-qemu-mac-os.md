@@ -5,7 +5,7 @@ date:   2022-08-28 19:07:27 +0200
 categories: jekyll update
 ---
 
-## Intro
+# Intro
 
 Soon after switching from a Linux laptop to an M1 Mac, I've run into two problems with hacking my Raspberry Pi:
 
@@ -34,7 +34,7 @@ I've tried a couple of solutions:
 
 Below, you'll find my braindump from a long day of experiments, that culminated in building a couple of kernels for my RPi and installing them on SD directly from my Mac.
 
-## Install Ubuntu in qemu
+# Install Ubuntu in qemu
 
 I've [this tutorial](https://adonis0147.github.io/post/qemu-macos-apple-silicon/) ([backup](https://web.archive.org/web/20221219200927/https://adonis0147.github.io/post/qemu-macos-apple-silicon/)).
 
@@ -77,7 +77,7 @@ qemu-system-aarch64 \
 
 4. Install Ubuntu using the install wizard
 
-### Running Ubuntu in qemu
+# Running Ubuntu in qemu
 
 Now, we'll run Ubuntu with SD Card connected to the host Mac OS. 
 
@@ -99,7 +99,7 @@ sudo qemu-system-aarch64 \
     -net nic -net user,hostfwd=tcp::2222-:22 # this will forward the SSH port from VM to 2222 on your localhost
 ```
 
-### Mounting SD card in virtualized Ubuntu in qemu
+# Mounting SD card in virtualized Ubuntu in qemu
 
 ```bash
 lsblk # find the SD card device file; we'll use vdb with vdb1 and vdb2 partitions
@@ -168,9 +168,3 @@ sudo umount /mnt/ext4
 
 Now you can unplug the SD card and insert it into your Raspberry Pi.
 If you have followed this instruction carefully, there's some chance your RPi will boot with the new kernel :)
-
-# TODO
-
-```bash
-```
-
