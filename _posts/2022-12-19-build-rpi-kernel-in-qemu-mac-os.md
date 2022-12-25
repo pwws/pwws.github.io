@@ -113,9 +113,9 @@ sudo mount -t ext4 /dev/vdb2 /mnt/ext4
 # now we should be able to see and modify the RPi filesystems in /mnt/{fat32, ext4}
 ```
 
-### Build kernel
+# Building kernel
 
-Follow the instructions from the official docs.
+Follow the instructions from the [official docs](https://www.raspberrypi.com/documentation/computers/linux_kernel.html).
 
 Here they are in short form, for RPi 3:
 
@@ -157,7 +157,7 @@ I have came up with 12 using the rule of thumb of using 1.5 * CPU cores.
 sudo env PATH=$PATH make ARCH=arm64 INSTALL_MOD_PATH=/mnt/ext4 modules_install
 
 sudo cp mnt/fat32/$KERNEL.img mnt/fat32/$KERNEL-backup.img # make a backup of the last used kernel image
-sudo cp arch/arm64/boot/Image /mnt/fat32/$KERNEL.img
+sudo cp arch/arm64/boot/Image.gz /mnt/fat32/$KERNEL.img
 sudo cp arch/arm64/boot/dts/broadcom/*.dtb /mnt/fat32/
 sudo cp arch/arm64/boot/dts/overlays/*.dtb* /mnt/fat32/overlays/
 sudo cp arch/arm64/boot/dts/overlays/README /mnt/fat32/overlays/
